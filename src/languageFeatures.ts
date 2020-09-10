@@ -3,11 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 'use strict';
+import * as ls from 'vscode-languageserver-types';
 
+import { CustomFormatterOptions } from './languageservice/yamlLanguageService';
 import { LanguageServiceDefaultsImpl } from './monaco.contribution';
 import { YAMLWorker } from './yamlWorker';
 
-import * as ls from 'vscode-languageserver-types';
 
 import Uri = monaco.Uri;
 import Position = monaco.Position;
@@ -16,8 +17,6 @@ import IRange = monaco.IRange;
 import Thenable = monaco.Thenable;
 import CancellationToken = monaco.CancellationToken;
 import IDisposable = monaco.IDisposable;
-import { CustomFormatterOptions } from 'yaml-language-server/out/server/src/languageservice/yamlLanguageService';
-
 export type WorkerAccessor = (...more: Uri[]) => Thenable<YAMLWorker>;
 
 // --- diagnostics --- ---

@@ -62,14 +62,6 @@ function bundleOne(moduleId, exclude) {
           main: 'lib/umd/main',
         },
         {
-          name: 'yaml-ast-parser-custom-tags',
-          location: path.join(
-            REPO_ROOT,
-            'node_modules/yaml-ast-parser-custom-tags'
-          ),
-          main: 'dist/src/index',
-        },
-        {
           name: 'jsonc-parser',
           location: path.join(REPO_ROOT, 'node_modules/jsonc-parser/lib/umd'),
           main: 'main',
